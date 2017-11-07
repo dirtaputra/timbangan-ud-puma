@@ -1,0 +1,1 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');class Credential extends MX_Controller { public function __construct() { parent::__construct(); } public function is_logged_in(){ if(!$this->session->userdata('logged_in')){ redirect (base_url() . 'authenticate'); return false; } return true; } }
